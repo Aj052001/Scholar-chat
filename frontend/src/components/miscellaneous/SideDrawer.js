@@ -131,7 +131,7 @@ const SideDrawer = () => {
         </Tooltip>
 
         <Text fontSize={"2xl"} fontFamily={"Work sans"}>
-          Scholar - Chat
+          Alumni Talk
         </Text>
 
         <div>

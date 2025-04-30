@@ -15,6 +15,8 @@ const Signup = () => {
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+  const [scholar,setScholar] = useState()
+
   const [confirmpassword, setConfirmpassword] = useState();
   const [password, setPassword] = useState();
   const [pic, setPic] = useState();
@@ -22,7 +24,7 @@ const Signup = () => {
 
   const submitHandler = async () => {
     setPicLoading(true);
-    if (!name || !email || !password || !confirmpassword) {
+    if (!name || !email || !password || !confirmpassword || !scholar) {
       toast({
         title: "Please Fill all the Feilds",
         status: "warning",
@@ -54,6 +56,7 @@ const Signup = () => {
         "/api/user",
         {
           name,
+          scholar,
           email,
           password,
           pic,
@@ -134,6 +137,14 @@ const Signup = () => {
         <Input
           placeholder="Enter Your Name"
           onChange={(e) => setName(e.target.value)}
+        />
+      </FormControl>
+      <FormControl id="sscholar" isRequired>
+        <FormLabel>Scholar Number</FormLabel>
+        <Input
+          type="text"
+          placeholder="Enter Your Scholar Number"
+          onChange={(e) => setScholar(e.target.value.toUpperCase())}
         />
       </FormControl>
       <FormControl id="semail" isRequired>

@@ -30,7 +30,7 @@ const Home = () => {
           color={"black"}
           textAlign="Center"
         >
-          Talk-A-Tive
+         Alumni Talk
         </Text>
       </Box>
 

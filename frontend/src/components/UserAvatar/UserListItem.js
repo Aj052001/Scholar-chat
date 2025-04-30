@@ -4,6 +4,8 @@ import React from "react";
 
 
 const UserListItem = ({ user,handleFunction }) => {
+  console.log(user)
+
         
   return (
     <Box
@@ -33,8 +35,7 @@ const UserListItem = ({ user,handleFunction }) => {
       <Box>
         <Text>{user.name}</Text>
         <Text fontSize="xs">
-          <b>Email : </b>
-          {user.email}
+          {user.scholar}
         </Text>
       </Box>
     </Box>
